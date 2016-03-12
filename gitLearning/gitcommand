@@ -1,0 +1,26 @@
+#生成sshkey
+ssh-keygen -t  rsa -C "sevenyearonelife@foxmail.com"
+#克隆repo
+git clone git@github.com:sparkLiwei/ProgrammingNote.git
+#git 日志
+git log --oneline --decorate --graph -all
+#git merge
+git merge origin/master
+
+vim testFile.txt
+cat testFile.txt
+#文件加入git
+git add testFile.txt
+#git commit
+git commit -m "add something to git"
+#git repo 拉取
+git pull
+cat testFile.txt
+#git 推到 repo
+git push
+#git 默认matching/simple
+git config --global push.default matching
+#删除本地branch
+git branch -d Linux
+#删除远程branch
+git push --delete origin Linux
