@@ -1,0 +1,49 @@
+第一节
+1.超级用户root密码的设置
+    //采用sudo passwd命令修改root密码
+2.切换用户
+    //采用su(switch user)命令切换用户
+3.//切换回当前用户的工作目录，可以用cd ~命令(~表示当前用户默认的工作目录）
+4.//ls -a 列出目录下的所有文件包括隐含文件
+ //列出目录下所有文件和目录的详细信息
+ //ls -l列出文件和目录的详细用户，不包括隐含文件和当前目录.、上级目录..
+ 
+第二节
+1.//man命令获取命令帮助手册
+  man ls
+  想退出命令查看，直接按q鍵退出即可，也可以h鍵显示less命令列表（man命令通过less命令输出结果）
+2.//使用绝对路径创建
+  mkdir /home/max
+  mkdir max/temp
+3.有时不想层层目录创建，此时可以在mkdir 后面加上参数 -p（parents），将父子目录一起创建
+     mkdir -p literature/promo
+4.主目录用~
+     cd ~
+5.rm -r中的r指的是递归的删除目录及目录中的文件，谨慎使用
+     rm -r literature/
+6.//将目录demo移到/home/xtwy/目录下
+     mv demo /home/xtwy/
+7.//如果包括子目录的话，则加上-r参数，表示递归地拷贝
+  cp -r literature/ /home/xtwy/
+8.//通过echo命令，将输出的命令重定向到文件
+  echo "hello linux” >> hello.txt
+  //touch命令，如何文件不存在，会创建文件
+9.复制文件 如果目标目录中已存在该文件，系统不会给出警告，而是直接覆盖，用-i降低风险
+  cp -i hell1.txt literature/demo
+10.mv 移动文件，同一目录时，相当于文件重命名，执行完成后hell1.txt不存在
+     mv hell2.txt literature/demo
+     mv hell1.txt hell2.txt
+11.显示文件头部内容用head命令，尾部用tail命令，默认显示行数为10
+     head -2 ~/.bashrc
+   tail ~/.bashrc
+12.采用tail命令动态地监测日志文件内容的增长
+   tail -f hello.txt
+   echo "hello linux linux" >> hello.txt
+   用‘>’会将文件中内容删除掉 不要用
+13.//根据文件内容排序
+   sort hello1.txt
+   //逆序输出
+   sort -r hello1.txt
+14.//diff进行内容比较
+   //-u参数将文件分成多块//比较的两个文件分别用-、+表示
+   diff -u hello1.txt hello.txt
