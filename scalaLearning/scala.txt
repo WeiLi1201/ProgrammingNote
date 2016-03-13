@@ -1,0 +1,30 @@
+
+第一节
+
+val  跟final类似，不能改变
+lazy 耗时操作可以提高运行效率
+var 可以被重新赋值
+\n     换行符
+\b     回退符
+\t     tab制表符
+\"     双引号
+\’     单引号
+\      反斜杠
+字符串变量用“”包裹
+要定义“hello world” ,可以加入转义符
+如果希望能够原样输出字符串的内容，则用三个”””将字符串包裹
+如：”””hello beautiful world, \ n \t \\ \\ \b “i’m a experienced programmer" ””"
+
+scala 一切操作皆方法，意味着scala是一门纯面向对象语言
+
+逻辑运算 &&与     ||或    1&2=> 0位与     1|2 =>3 位或  取反，左移，右移   在复习
+
+scala 中对象的比较不同于java
+scala基于内容比较，而java比较是基于引用，进行内容比较时需要定义比较方法
+运算符优先级 表，自己搞不清楚，你自己加个（），可读性高
+
+字符串操作
+val str=“hello”
+包含java中String所有的方法 str toUpperCase
+特有的方法：reverse map slice drop 用法查看scala API
+<- 生成器generator
