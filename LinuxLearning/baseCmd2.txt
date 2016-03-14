@@ -1,0 +1,122 @@
+第三节
+1.与Linux用户信息相关的文件有两个，分别是/etc/passwd， /etc/shadow
+     more /etc/passwd
+   /etc/passwd文件内容格式为：
+   account：password：UID:GID:GECOS:diretory:shell
+account: 用户名或帐号
+password ：用户密码占位符
+UID：用户的ID号
+GID：用户所在组的ID号
+GECOS:用户的详细信息（如姓名，年龄，电话等）
+diretory：用户所的主目录
+shell：用户所在的编程环境
+     /etc/shadow文件内容格式为：
+
+
+2.添加用户 useradd
+   useradd -u 1988 -g 1000 john
+   tail -1 /etc/passwd
+   sudo passwd john
+3.修改用户 usermod
+   usermod -s /bin/bash john
+4.删除用户 userdel
+     userdel -r john //连同主目录一起删掉
+5.组的增加、删除和修改实际上就对/etc/group文件的更新。
+     /使用默认增加用户组
+   groupadd john
+  //添加用户组后得到的/etc/group文件内容
+      groupmod -g 1002 -n john2 john1
+  //修改组名
+   groupdel 删除用户组名
+6.权限说明
+  //hello1.txt是一个普通文件
+  //root用户具有读写权限，但不能执行
+  //用户组root具有读权限，无写和执行权限
+  //其它用户只有读权限，无写和执行权限
+  -rw-r--r--1root root302015-08-2217:28hello1.txt
+//Desktop是一个目录
+//用户xtwy具有读写和执行权限，这里面的执行权限x表示可以访问目录
+//用用组xtwy具有读和执行权限，无写权限
+//其它用户具有读和执行权限，无写权限
+drwxr-xr-x 2 xtwy xtwy 4096 2015-08-20 23:31 Desktop
+7.增加权限
+//chmod命令，a表示所有，包括用户、组及其它用户都有增加写权限
+chmod a+w hello1.txt
+chmod a-w hello1.txt //减小权限
+
+8.灵活设置权限，采用数字方式
+     读、写、运行三项权限可以用数字表示，就是r=4,w=2,x=1
+     //用户具有读写权限
+    //用户组和其它用户具有执行权限，无读写权限
+  chmod611hello1.txt
+9.改变用户 chown
+  将root拥有改xtwy用户拥有
+  chown xtwy hello1.txt
+  //修改完成后xtwy可以对文件中的内容进行修改
+10.改变用户组 chgrp
+    chgrp xtwy hello1.txt
+
+第四节
+
+1. 访问控制列表ACL
+     安装 ACL apt-get install acl
+     //获取文件的ACL
+   getfacl hello1.txt # file: hello1.txt
+  //下列命令给组xtwy添加读权限，给组root添加读写执行权限//给o也添加读写、执行权限
+  setfacl -m g:xtwy:r,g:root:rwx,o::rwx hello1.txt
+     //给目录添加acl
+     setfacl -d -m g:groupacl:r-x acltest/
+   ls -ld acltest/
+  //如果在acl目录中没有指定文件的acl信息，则会使用目录对应默认acl。
+2.链接
+    //利用ln命令创建一个test1.txt文件的硬链接
+  ln test1.txt /home/xtwy/test1link
+  //链接数+1
+  -rw-r--r--+ 3 root root 19 2015-08-23 00:59 test1.txt
+  //不能创建目录的硬链接
+  //创建普通文件的符号链接,//链接数并没有增加，还是1
+   ln -s Music softlink_Music
+   ln -s soft
+   符号链接文件的大小为8//它与原始文件大小不一样，其大小是目标文件路径名中的字符数
+   符号链接可以指向一个不存在的文件
+      硬链接由于采用的是指针的方式，如果文件删除，它将一直指向已删除的文件，而软链接总是指向新创建的文件
+
+      echo "hard and soft link test" > test.txt
+   ln test.txt hardlink_test.txt
+   cat hardlink_test.txt
+   ln -s test.txt softlink_test.txt
+   cat softlink_test.txt
+   rm test.txt
+   cat hardlink_test.txt
+   cat softlink_test.txt
+   创建新的test.txt文件之后，符号链接指向新文件，硬链接仍然指向被删除的文件
+   echo "new test file" > test.txt
+
+3.压缩和归档文件
+  bzip2压缩
+   bzip2 -v profile
+   bunzip2 profile.bz2
+  //bzcat查看文件压缩文件内容，原文件不会改变
+   bzcat profile.bz2 | tail -10
+
+  tar打包文件
+    c表示create，v表示verbose，显示详细信息，f表示从一个文件进行读写，打包好的文件以tar         作为扩展名结尾
+   tar -cvf test.tar profile
+   tar -tvf test.tar  //按表格形式显示打包的内容
+   tar解包文件
+   tar -xvf test.tar
+
+      gzip压缩与解压缩文件
+   gzip profile
+   gunzip profile.gz
+
+       tar.gz文件解压缩
+   tar -zxvf hadoop-2.7.1.tar.gz
+
+其他命令
+在标准路径下搜索与名称相关的文件，whereis将所有搜索到的文件都显示
+whereis tar
+which在设定的搜索路径下进行目录搜索，只显示搜索到的第一个文件
+which tar
+locate命令用于在本地文件系统上进行文件搜索
+locate john
