@@ -39,7 +39,13 @@ object HighOrderFunction {
     val fun3 : (Double) =>Double = 3 * _
 
 
+    (1 to 9).map("*" * _).foreach(println)
+    (1 to 9).filter(_ % 2 == 0).foreach(println)
 
+    println((1 to 9).reduceLeft(_ * _))
+
+    "Spark is the most exciting running int th big data today".split(" ")
+      .sortWith(_.length < _.length).foreach(println)
 
 
 
