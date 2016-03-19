@@ -36,6 +36,7 @@ object PatternMatchFunction {
     match_list(List(0,1))
     match_list(List(0,1,2,3,45,6))
 
+    //scala 提取器Extractor
     def match_tuple(tuple : Any) =tuple match{
       case(0, _) => println("Tuple:" + "0" )
       case(x,0)  => println("Tuple:" + x)
