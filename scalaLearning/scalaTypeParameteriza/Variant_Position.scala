@@ -9,5 +9,7 @@ class P[+T](val first : T,val second :T){
 }
 
 object Variant_Position {
+  def main(args: Array[String]) {
 
+  }
 }
