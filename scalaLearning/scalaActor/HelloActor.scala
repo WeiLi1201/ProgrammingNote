@@ -24,7 +24,7 @@ object Second_Actot extends Actor{
   }
 }
 
-object HelloActor {
+object Hello_Actor {
   def main(args: Array[String]) {
     First_Actor.start
     Second_Actot.start
