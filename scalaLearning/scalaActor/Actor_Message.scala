@@ -29,7 +29,7 @@ object Actor_Messages {
       while (true){
         //如果receive中没有case,Actor会忽略掉
         //传递消息的时候,Actor会调用isDefinedAt方法进行验证
-        //isDefinedAt 会判断传递过来的消息是否被receive的case定义为要处理的消息了
+        //isDefinedAt 会判断传递过来的消息是否被receive的case定义为要处理的消息
         //如果返回true,说明Apply应用是安全的,就会去匹配case
         //如果返回false,Actor内部会进行一些透明处理,不会传递给Apply方法,而是忽略掉
         receive{ //Apply | isDefinedAt
