@@ -14,7 +14,7 @@ object RegExpressOps {
     for (matchingString <- numPattern.findAllIn("99345 Scala, 22298 Spark")) println(matchingString)
 
     //找到首个匹配项
-    println(numberPattern.findFirstIn("99ss java, 222 hadoop"))
+    println(numberPattern.findFirstIn("99ss java, 222 hadoop  444"))
 
     val numitemPattern ="""([0-9]+) ([a-z]+)""".r
 

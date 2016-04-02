@@ -20,6 +20,8 @@ package scalaOOP
   object ApplyOperation {
     def main(args:Array[String]){
       val array = Array(1,2,3,4,5,6)
+
+      //a会调用apply方法
       val a = ApplyTest()
       a.haveATry
 

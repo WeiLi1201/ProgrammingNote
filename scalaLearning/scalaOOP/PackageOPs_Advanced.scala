@@ -22,7 +22,7 @@ package spark{
 
   import spark.navigation.Navigator
 
-  object Vehicle{
+    object Vehicle{
       //new Navigator 证明范围扩大到了spark
       private[launch] val guide = new Navigator
     }

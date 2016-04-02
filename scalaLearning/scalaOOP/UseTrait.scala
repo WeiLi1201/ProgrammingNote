@@ -27,6 +27,7 @@ trait TraitLoggered {
   def loged (msg :String): Unit ={
     println("TraitLoggered Log content is : " + msg)
   }
+
 }
 
 trait ConsoleLogger extends TraitLogger {
