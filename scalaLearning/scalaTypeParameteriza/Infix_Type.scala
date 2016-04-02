@@ -1,6 +1,8 @@
 /**
  * Created by Variant on 16/3/27.
  */
+
+//不明白要说明的意思,重新看
 object Infix_Type {
   def main(args: Array[String]) {
     object Log {

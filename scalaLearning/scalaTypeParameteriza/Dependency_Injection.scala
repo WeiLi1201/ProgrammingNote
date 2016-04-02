@@ -2,6 +2,7 @@
  * Created by Variant on 16/3/27.
  */
 
+//依赖注入重新看
 trait Logger1{
   def log(msg :String)
 }
