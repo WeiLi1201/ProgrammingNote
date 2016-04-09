@@ -1,0 +1,57 @@
+[info] Updating {file:/Users/Variant/workspace/HelloAkkaSBT/}helloakkasbt...
+[debug] :: resolving dependencies :: default#helloakkasbt_2.10;1.0
+[debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
+[debug] 	validate = true
+[debug] 	refresh = false
+[debug] resolving dependencies for configuration 'compile'
+[debug] == resolving dependencies for default#helloakkasbt_2.10;1.0 [compile]
+[debug] == resolving dependencies default#helloakkasbt_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
+[info] Resolving org.scala-lang#scala-library;2.10.4 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5251b5b1
+[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
+[debug] 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
+[debug] 	[2.10.4] org.scala-lang#scala-library;2.10.4
+[debug] == resolving dependencies default#helloakkasbt_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->runtime]
+[debug] == resolving dependencies default#helloakkasbt_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->compile]
+[debug] == resolving dependencies default#helloakkasbt_2.10;1.0->org.scala-lang#scala-library;2.10.4 [compile->master]
+[debug] == resolving dependencies default#helloakkasbt_2.10;1.0->com.typesafe.akka#akka-actor;2.0.3 [compile->default(compile)]
+[info] Resolving com.typesafe.akka#akka-actor;2.0.3 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-actor;2.0.3 {compile=[default(compile)]}
+[info] Resolving com.typesafe.akka#akka-actor;2.0.3 ...
+[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe.akka#akka-actor;2.0.3 {compile=[default(compile)]}
+[debug] 		tried /Users/Variant/.ivy2/local/com.typesafe.akka/akka-actor/2.0.3/ivys/ivy.xml
+[debug] 	local: no ivy file found for com.typesafe.akka#akka-actor;2.0.3
+[debug] 		tried https://jcenter.bintray.com/com/typesafe/akka/akka-actor/2.0.3/akka-actor-2.0.3.pom
+[debug] 	jcenter: found md file for com.typesafe.akka#akka-actor;2.0.3
+[debug] 		=> https://jcenter.bintray.com/com/typesafe/akka/akka-actor/2.0.3/akka-actor-2.0.3.pom (2.0.3)
+[debug] downloading https://jcenter.bintray.com/com/typesafe/akka/akka-actor/2.0.3/akka-actor-2.0.3.pom ...
+[debug] 	jcenter: downloading https://jcenter.bintray.com/com/typesafe/akka/akka-actor/2.0.3/akka-actor-2.0.3.pom
+[debug] 	jcenter: downloading https://jcenter.bintray.com/com/typesafe/akka/akka-actor/2.0.3/akka-actor-2.0.3.pom.sha1
+[debug] sha1 OK for https://jcenter.bintray.com/com/typesafe/akka/akka-actor/2.0.3/akka-actor-2.0.3.pom
+[debug] 	[SUCCESSFUL ] com.typesafe.akka#akka-actor;2.0.3!akka-actor.pom(pom.original) (12232ms)
+[debug] 		tried /Users/Variant/.ivy2/local/com.typesafe.akka/akka-actor/2.0.3/jars/akka-actor.jar
+[debug] 		tried https://jcenter.bintray.com/com/typesafe/akka/akka-actor/2.0.3/akka-actor-2.0.3.jar
+[debug] 	found com.typesafe.akka#akka-actor;2.0.3 in jcenter
+[debug] == resolving dependencies default#helloakkasbt_2.10;1.0->com.typesafe.akka#akka-actor;2.0.3 [compile->runtime]
+[debug] == resolving dependencies default#helloakkasbt_2.10;1.0->com.typesafe.akka#akka-actor;2.0.3 [compile->compile]
+[debug] == resolving dependencies com.typesafe.akka#akka-actor;2.0.3->org.scala-lang#scala-library;2.9.2 [compile->master(compile)]
+[debug] == resolving dependencies com.typesafe.akka#akka-actor;2.0.3->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+[debug] == resolving dependencies com.typesafe.akka#akka-actor;2.0.3->org.scala-lang#scala-library;2.9.2 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.akka#akka-actor;2.0.3->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+[debug] == resolving dependencies com.typesafe.akka#akka-actor;2.0.3->com.typesafe#config;0.3.1 [compile->master(compile)]
+[info] Resolving com.typesafe#config;0.3.1 ...
+[debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;0.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[info] Resolving com.typesafe#config;0.3.1 ...
+[debug] sbt-chain-delegate: Checking cache for: dependency: com.typesafe#config;0.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] 		tried /Users/Variant/.ivy2/local/com.typesafe/config/0.3.1/ivys/ivy.xml
+[debug] 	local: no ivy file found for com.typesafe#config;0.3.1
+[debug] 		tried https://jcenter.bintray.com/com/typesafe/config/0.3.1/config-0.3.1.pom
+[debug] 	jcenter: found md file for com.typesafe#config;0.3.1
+[debug] 		=> https://jcenter.bintray.com/com/typesafe/config/0.3.1/config-0.3.1.pom (0.3.1)
+[debug] downloading https://jcenter.bintray.com/com/typesafe/config/0.3.1/config-0.3.1.pom ...
+[debug] 	jcenter: downloading https://jcenter.bintray.com/com/typesafe/config/0.3.1/config-0.3.1.pom
+[debug] 	jcenter: downloading https://jcenter.bintray.com/com/typesafe/config/0.3.1/config-0.3.1.pom.sha1
+[debug] sha1 OK for https://jcenter.bintray.com/com/typesafe/config/0.3.1/config-0.3.1.pom
+[debug] 	[SUCCESSFUL ] com.typesafe#config;0.3.1!config.pom(pom.original) (2666ms)
+[debug] 		tried /Users/Variant/.ivy2/local/com.typesafe/config/0.3.1/bundles/config.jar
+[debug] 		tried https://jcenter.bintray.com/com/typesafe/config/0.3.1/config-0.3.1.jar
