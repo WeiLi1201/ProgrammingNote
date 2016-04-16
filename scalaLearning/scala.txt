@@ -30,3 +30,4 @@ val str=“hello”
 <- 生成器generator
 there still much of things should be learn
 life is good，always keep passion
+always love your work，It‘s not only work but the whole life
