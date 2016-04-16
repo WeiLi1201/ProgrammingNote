@@ -29,3 +29,4 @@ val str=“hello”
 特有的方法：reverse map slice drop 用法查看scala API
 <- 生成器generator
 there still much of things should be learn
+life is good，always keep passion
