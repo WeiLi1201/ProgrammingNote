@@ -28,4 +28,5 @@ Goodmorning
 val str=“hello”
 包含java中String所有的方法 str toUpperCase
 特有的方法：reverse map slice drop 用法查看scala API
+LIFE IS GOOD
 <- 生成器generator
