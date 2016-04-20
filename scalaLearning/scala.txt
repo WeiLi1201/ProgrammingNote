@@ -30,3 +30,4 @@ val str=“hello”
 特有的方法：reverse map slice drop 用法查看scala API
 LIFE IS GOOD
 <- 生成器generator
+Hello World
