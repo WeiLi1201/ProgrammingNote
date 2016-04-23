@@ -19,6 +19,7 @@ it just for fun
 scala 一切操作皆方法，意味着scala是一门纯面向对象语言
 
 逻辑运算 &&与     ||或    1&2=> 0位与     1|2 =>3 位或  取反，左移，右移   在复习
+OMG I'm forget something
 
 scala 中对象的比较不同于java
 scala基于内容比较，而java比较是基于引用，进行内容比较时需要定义比较方法
