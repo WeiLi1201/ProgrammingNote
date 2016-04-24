@@ -34,3 +34,4 @@ LIFE IS GOOD
 <- 生成器generator
 Hello World
 life is good,but we should do something interesting
+It's a good day,do something you like
