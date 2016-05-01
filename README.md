@@ -12,3 +12,4 @@ Do something interest
 Be someone you like
 SparkLiwei
 The future is coming
+Change to all Change
