@@ -37,3 +37,4 @@ LIFE IS GOOD
 Hello World
 life is good,but we should do something interesting
 It's a good day,do something you like
+life is always good
