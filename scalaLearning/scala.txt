@@ -16,9 +16,6 @@ life is good,always love yourself
 要定义“hello world” ,可以加入转义符
 如果希望能够原样输出字符串的内容，则用三个”””将字符串包裹
 如：”””hello beautiful world, \ n \t \\ \\ \b “i’m a experienced programmer" ””"
-
-dsdasdasdasda
-dsdasdasda
 It's time to do something interesting
 scala 一切操作皆方法，意味着scala是一门纯面向对象语言
 
